@@ -134,7 +134,7 @@
 #else
     NSString *errorMessage = NSLocalizedString(@"Application ID functions require SQLite 3.7.17", nil);
     XCTFail("%@", errorMessage);
-    if (self.db.logsErrors) os_log_debug(OS_LOG_DEFAULT,"%@", errorMessage);
+    if (self.db.logsErrors) os_log(OS_LOG_DEFAULT,"%@", errorMessage);
 #endif
 }
 
