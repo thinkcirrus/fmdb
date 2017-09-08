@@ -314,7 +314,7 @@ NSString *comment = nil;
 
 BOOL success = [db executeUpdate:@"INSERT INTO authors (identifier, name, date, comment) VALUES (?, ?, ?, ?)", @(identifier), name, date, comment ?: [NSNull null]];
 if (!success) {
-    os_log(OS_LOG_DEFAULT,"error = %@", [db lastErrorMessage]);
+    ////os_log(OS_LOG_DEFAULT,"error = %@", [db lastErrorMessage]);
 }
 ```
 
@@ -351,7 +351,7 @@ The parameters *must* start with a colon. SQLite itself supports other character
 NSDictionary *arguments = @{@"identifier": @(identifier), @"name": name, @"date": date, @"comment": comment ?: [NSNull null]};
 BOOL success = [db executeUpdate:@"INSERT INTO authors (identifier, name, date, comment) VALUES (:identifier, :name, :date, :comment)" withParameterDictionary:arguments];
 if (!success) {
-    os_log(OS_LOG_DEFAULT,"error = %@", [db lastErrorMessage]);
+    ////os_log(OS_LOG_DEFAULT,"error = %@", [db lastErrorMessage]);
 }
 ```
 
