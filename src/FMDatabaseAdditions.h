@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMDatabase.h"
+#import "FMResultSet.h"
 @interface FMDatabase (FMDatabaseAdditions)
 
 
