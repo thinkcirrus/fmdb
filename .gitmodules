@@ -1,0 +1,2 @@
+[submodule "Externals/fmdb"]
+	url = https://CirrusThink@github.com/thinkcirrus/fmdb.git
